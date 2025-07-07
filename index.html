@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Auto Paint & Repair | Portland</title>
+    <style>
+        body { font-family: Inter, sans-serif; margin: 0; padding: 0; background: #f2f2f2; }
+        .mobile{
+            display:none;}
+        header {text-align: center;}
+        a { color: white; text-decoration: none; font-weight: bold; }
+        .container { padding: 20px; max-width: 800px; margin: auto; background: white; }
+        h1, h2 { color: #1f3543; }
+        h1 { font-size: 22px; margin: 0; }
+        h2 { font-size: 20px; margin: 0; }
+        li{ margin-bottom: 5px; }
+        .cta { background: #ff6600; color: white; padding: 15px; text-align: center;
+            margin: 20px 0; border-radius: 12px;  cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .cta:hover { box-shadow: 0px 0px 5px 5px rgb(194 209 236); transform: scale(1.05); cursor: pointer}
+        .cta a { color: white; text-decoration: none; font-weight: bold;  }
+        footer { text-align: center; padding: 10px; background: #e6e6e6; }
+        .header{
+            padding: 0 20px; border-bottom: 1px solid #cccccc; display: flex;
+            align-items: center; justify-content: space-between; max-width: 800px;
+            margin: auto; background: white;}
+        .header a{
+            color: #1f3543;
+            font-size: 20px;
+        }
+        .header a:hover{
+            color: #ff6600;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .service-card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 12px;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .portfolio{
+            display: flex; gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            object-fit: cover;
+        }
+        .portfolio img {width: 100%;
+            max-width: 250px; /* обмежує ширину на десктопі */
+            height: auto;
+            border-radius: 12px;}
+
+        .portfolio img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        .why-wrap{
+            background: #203643;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 5px 5px rgb(194 209 236);
+        }
+        .why-wrap h2{
+            color: #f9f9f9;
+        }
+        .reviews, .why-us { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 30px; }
+        .review, .why-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #ff6600;
+            border-radius: 12px;
+            width: 250px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .why-item, .service-card {
+            border-left: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .why-item svg, .service-card svg{
+            width: 70px;
+            color: #203442;
+        }
+        .review:hover, .why-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .review strong, .why-item strong { display: block; margin-bottom: 5px; color: #333; }
+        .stars { color: #ffaa00; }
+        @media screen and (max-width: 650px) {
+            header { display: none; }
+            header.mobile {
+                padding: 20px; border-bottom: 1px solid #cccccc;}
+            .mobile { display: block; }
+            .review { width: 100%; }
+        }
+
+        @media screen and (max-width: 650px) {
+            header { display: none; }
+            header.mobile {
+                padding: 20px; border-bottom: 1px solid #cccccc;}
+            .mobile { display: block; }
+            .portfolio{
+                flex-direction: column;
+                align-items: center;
+            }
+            .portfolio img {width: 100%;
+                max-width: 90%;}
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="img/logo.png" height="100" width="100"/>
+    <header>
+        <h1>Auto Paint & Repair in Portland</h1>
+        <h2>Affordable. Honest. Local.</h2>
+    </header>
+    <a href="tel:+15642087142"> 📞 564.208.7142</a>
+</div>
+<header class="mobile">
+    <h1>Auto Paint & Repair in Portland</h1>
+    <h2>Affordable. Honest. Local.</h2>
+</header>
+
+<div class="container">
+    <h2>🚗 What We Provide</h2>
+    <div class="services">
+        <div class="service-card">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>
+            <strong>Free Estimates</strong><br />Insurance-ready damage reports</div>
+        <div class="service-card">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+            </svg>
+
+            <strong>Car Painting</strong><br />Full body or part refinishing</div>
+        <div class="service-card">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+            </svg>
+            <strong>Post-Accident Repair</strong><br />Frame, bumper & panel repair
+        </div>
+        <div class="service-card">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008Z" />
+            </svg>
+
+            <strong>Scratch & Dent Removal</strong><br />Quick fixes for minor damage</div>
+    </div>
+
+    <div class="cta">
+        <a href="tel:+15642087142">Schedule a Repair</a>
+    </div>
+<div class="why-wrap">
+    <h2>💡 Why Choose Us</h2>
+    <div class="why-us">
+        <div class="why-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
+            </svg>
+            <strong>Honest & Local:</strong> We're a small Portland-based workshop that cares about every client and every car.</div>
+        <div class="why-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+            </svg>
+
+            <strong>Affordable Quality:</strong> High-quality paint and repair work without dealership prices.</div>
+        <div class="why-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+
+            <strong>Fast Turnaround:</strong> We respect your time — most jobs completed in 1–3 days.</div>
+        <div class="why-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+            </svg>
+
+            <strong>Free Estimates:</strong> No hidden fees. We provide clear, honest pricing — including insurance estimates.</div>
+        <div class="why-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+            </svg>
+
+            <strong>Customer-First Approach:</strong> We treat your car like it’s our own — and our reviews prove it.</div>
+    </div>
+</div>
+    <br>
+    <h2>📷 Portfolio</h2>
+    <br>
+    <div class="portfolio">
+        <img src="img/examples/1.jpg" />
+        <img src="img/examples/2.jpg" />
+        <img src="img/examples/3.jpg" />
+    </div>
+    <br>
+    <h2>⭐ What Our Clients Say</h2>
+    <div class="reviews">
+        <div class="review">
+            <strong>Emily R. – Portland, OR</strong>
+            <span class="stars">★★★★★</span>
+            <p>After my fender got smashed in a parking lot, I was dreading the repair bill. Stumptown Auto Repair not only fixed it fast — the price was fair and the paint match was perfect. Feels like new again!</p>
+        </div>
+        <div class="review">
+            <strong>Jason M. – Sellwood</strong>
+            <span class="stars">★★★★★</span>
+            <p>Vadym did an incredible job on my scratched bumper. You’d never know it was damaged. Super friendly, transparent pricing, and fast turnaround. Highly recommend!</p>
+        </div>
+        <div class="review">
+            <strong>Rachel D. – Alberta Arts District</strong>
+            <span class="stars">★★★★★</span>
+            <p>I contacted three shops — and this one gave the clearest estimate and most honest vibe. The work was top-notch and I loved supporting a small local business.</p>
+        </div>
+        <div class="review">
+            <strong>Derek S. – Beaverton</strong>
+            <span class="stars">★★★★★</span>
+            <p>Dropped off my car on Monday, picked it up Wednesday looking brand new. The paint job is flawless, and you can tell he really cares about the details.</p>
+        </div>
+        <div class="review">
+            <strong>Sarah & Ben – SE Portland</strong>
+            <span class="stars">★★★★★</span>
+            <p>We brought in our family van after a minor accident. Great communication, no surprises, and the van looks amazing. We’ll definitely come back if we ever need more work done.</p>
+        </div>
+    </div>
+    <div class="cta">
+    <a href="tel:+15642087142">Schedule a Repair</a>
+</div>
+</div>
+
+
+
+<footer>
+    <p>&copy; 2025 Stumptown Auto Repair - Auto Paint & Repair | Portland, OR</p>
+</footer>
+</body>
+</html>
